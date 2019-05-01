@@ -33,6 +33,7 @@ class ViewController: NSViewController {
     func showError(_ error: String){
         self.errorText.stringValue = error
         self.errorText.isHidden = false
+        NSSound.beep()
     }
     
     func DownloadSSB(_ filePath: URL) {
