@@ -6,7 +6,7 @@ Its very easy to use, just drag slack into the app and it'll work!
 
 ![image of dark slack app](https://github.com/Ciuffi/DarkSlackApp/raw/master/Readme_assets/example.png)
 
-you can download the latest build here [0.0.1](https://drive.google.com/open?id=1EOJal80edlLIjw7bbI_Dd1isZSVZcXgt)
+you can download the latest build here [0.0.1](https://drive.google.com/open?id=1mlbFchtJULncJ7sQJYFqfC0a9K4VkumV)
 
 ## todo:
 - allow the ability to reverse slack back to light without reinstalling
