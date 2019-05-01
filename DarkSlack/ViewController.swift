@@ -23,12 +23,6 @@ class ViewController: NSViewController {
         dropZone.delegate = self
         progress.stopAnimation(self)
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
     
     func showError(_ error: String){
         self.errorText.stringValue = error

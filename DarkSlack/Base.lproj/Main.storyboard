@@ -71,7 +71,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="82" y="26"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -92,7 +92,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-198" y="257"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -155,7 +155,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="631"/>
+            <point key="canvasLocation" x="306" y="257"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="a08-zR-1dY">
@@ -176,7 +176,7 @@
                 </windowController>
                 <customObject id="8pJ-bQ-nxg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381" y="-332"/>
+            <point key="canvasLocation" x="-198" y="-188"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="6vv-3i-b7K">
@@ -259,7 +259,7 @@ DQ
                 </viewController>
                 <customObject id="eiL-eX-yDe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-153" y="-332"/>
+            <point key="canvasLocation" x="306" y="-188"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="lOe-Gg-xTq">
@@ -280,7 +280,7 @@ DQ
                 </windowController>
                 <customObject id="dd7-Rc-GAm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-307" y="-710"/>
+            <point key="canvasLocation" x="827" y="263"/>
         </scene>
         <!--About-->
         <scene sceneID="ga8-BZ-akq">
@@ -331,7 +331,7 @@ DQ
                 </viewController>
                 <customObject id="tpF-8h-N3B" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="-735"/>
+            <point key="canvasLocation" x="1322" y="263"/>
         </scene>
     </scenes>
     <resources>

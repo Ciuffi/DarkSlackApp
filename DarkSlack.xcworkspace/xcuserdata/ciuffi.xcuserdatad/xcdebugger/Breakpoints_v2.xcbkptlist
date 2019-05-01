@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DarkSlack/ViewController.swift"
+            timestampString = "578389312.80942"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #2 (Alamofire.DownloadResponse&lt;Foundation.Data&gt;) -&gt; () in DarkSlack.ViewController.DownloadSSB(Foundation.URL) -&gt; ()"
+                  moduleName = "DarkSlack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ciuffi/dev/DarkSlack/DarkSlack/ViewController.swift"
+                  timestampString = "578389318.608053"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "302">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DarkSlack.ViewController.draggingFileDecline(Foundation.URL) -&gt; ()"
+                  moduleName = "DarkSlack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ciuffi/dev/DarkSlack/DarkSlack/ViewController.swift"
+                  timestampString = "578389318.611689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
