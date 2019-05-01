@@ -175,15 +175,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDz-OM-iVI">
-                                <rect key="frame" x="10" y="75" width="350" height="25"/>
+                                <rect key="frame" x="10" y="75" width="458" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="https://github.com/widget-/slack-black-theme" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Gvw-8O-z2L" id="6Fu-1F-z7C">
+                                <popUpButtonCell key="cell" type="push" title="https://raw.githubusercontent.com/caiceA/slack-black-theme/master/ssb-interop.js" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Gvw-8O-z2L" id="6Fu-1F-z7C">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="0J6-jV-UCg">
                                         <items>
-                                            <menuItem title="https://github.com/widget-/slack-black-theme" state="on" id="Gvw-8O-z2L"/>
-                                            <menuItem title="https://github.com/caiceA/slack-black-theme" id="Zdg-Tj-Ffy"/>
+                                            <menuItem title="https://raw.githubusercontent.com/caiceA/slack-black-theme/master/ssb-interop.js" state="on" id="Gvw-8O-z2L"/>
+                                            <menuItem title="https://raw.githubusercontent.com/widget-/slack-black-theme/master/custom.css" id="Zdg-Tj-Ffy"/>
                                             <menuItem title="Custom" id="koV-jn-xap"/>
                                         </items>
                                     </menu>

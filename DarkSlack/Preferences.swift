@@ -12,7 +12,7 @@ struct Preferences {
     var url: String {
         get {
             // 2
-            return UserDefaults.standard.string(forKey: "url") ?? "https://github.com/widget-/slack-black-theme"
+            return UserDefaults.standard.string(forKey: "url") ?? "https://raw.githubusercontent.com/caiceA/slack-black-theme/master/ssb-interop.js"
         }
         set {
             // 4
