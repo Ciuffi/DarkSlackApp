@@ -85,6 +85,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7X-a1-rpW">
+                                <rect key="frame" x="118" y="40" width="244" height="53"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" alignment="center" title="Done!" id="NOz-Te-9OT">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPf-Kg-G2r">
                                 <rect key="frame" x="123" y="101" width="252" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -112,6 +121,7 @@
                     <connections>
                         <outlet property="SlackImage" destination="sbW-De-U2T" id="12K-5h-jta"/>
                         <outlet property="StaticText" destination="yPf-Kg-G2r" id="9pb-OT-Xha"/>
+                        <outlet property="doneText" destination="O7X-a1-rpW" id="lcZ-71-c5F"/>
                         <outlet property="dropZone" destination="bnT-i8-7t4" id="hvW-7l-kqY"/>
                         <outlet property="progress" destination="hBG-GG-Xo6" id="UPu-kW-Jog"/>
                     </connections>
