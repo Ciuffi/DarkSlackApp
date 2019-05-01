@@ -29,10 +29,16 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    func showError(_ error: String){
+        self.errorText.stringValue = error
+        self.errorText.isHidden = false
+    }
+    
     func DownloadSSB(_ filePath: URL) {
         var prefs = Preferences()
         var ssbURL: String?
-        if (prefs.url == "custom"){
+        if (prefs.url == "Custom"){
             ssbURL = prefs.customURL
         }else{
             ssbURL = prefs.url
@@ -42,10 +48,14 @@ class ViewController: NSViewController {
             return (path, [.removePreviousFile])
         }
         Alamofire.download(ssbURL!, to:
-            destination).responseData { _ in
+            destination).responseData {response in
+                switch response.result {
+                case .failure:
+                    self.showError("Failed to download file: \(ssbURL!)")
+                case .success(_):
+                    self.doneText.isHidden = false
+                }
                 self.progress.stopAnimation(self)
-                self.doneText.isHidden = false
-                print("Successfully downloaded from url \(ssbURL!)")
         }
     }
 }
@@ -60,6 +70,33 @@ extension ViewController: DragContainerDelegate {
         DownloadSSB(file)
     }
     func draggingFileDecline(_ file: URL) {
-        errorText.isHidden = false;
+        doneText.isHidden = true
+        self.showError("File is not the Slack App")
+    }
+}
+
+extension ViewController {
+    @IBAction func selectSlackFile(_sender: Any) {
+        let dialog = NSOpenPanel();
+        
+        dialog.title                   = "Choose your Slack App";
+        dialog.showsResizeIndicator    = true;
+        dialog.showsHiddenFiles        = false;
+        dialog.canChooseDirectories    = true;
+        dialog.canCreateDirectories    = false;
+        dialog.allowsMultipleSelection = false;
+        dialog.allowedFileTypes        = ["app"];
+        
+        if (dialog.runModal() == NSApplication.ModalResponse.OK) {
+            let result = dialog.url
+            
+            if (result != nil) {
+                let path = result!.path
+                let url = URL(fileURLWithPath: path)
+                (url.lastPathComponent == "Slack.app") ? draggingFileAccept(url) : draggingFileDecline(url)
+            }
+        } else {
+            return
+        }
     }
 }
