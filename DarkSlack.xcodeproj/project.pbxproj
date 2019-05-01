@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6115DA93295A3735FF470C10 /* Pods_DarkSlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1577F484DF8817B659416040 /* Pods_DarkSlack.framework */; };
 		91EDE1BF2278DB50001E3A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EDE1BE2278DB50001E3A63 /* AppDelegate.swift */; };
 		91EDE1C12278DB50001E3A63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EDE1C02278DB50001E3A63 /* ViewController.swift */; };
 		91EDE1C32278DB50001E3A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91EDE1C22278DB50001E3A63 /* Assets.xcassets */; };
 		91EDE1C62278DB50001E3A63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91EDE1C42278DB50001E3A63 /* Main.storyboard */; };
+		91EDE1CF2278DFE9001E3A63 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EDE1CE2278DFE9001E3A63 /* DragView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1577F484DF8817B659416040 /* Pods_DarkSlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkSlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E2501BACD6ED9542E9D2B33 /* Pods-DarkSlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkSlack.release.xcconfig"; path = "Target Support Files/Pods-DarkSlack/Pods-DarkSlack.release.xcconfig"; sourceTree = "<group>"; };
 		91EDE1BB2278DB50001E3A63 /* DarkSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EDE1BE2278DB50001E3A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91EDE1C02278DB50001E3A63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +25,8 @@
 		91EDE1C52278DB50001E3A63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91EDE1C72278DB50001E3A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91EDE1C82278DB50001E3A63 /* DarkSlack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DarkSlack.entitlements; sourceTree = "<group>"; };
+		91EDE1CE2278DFE9001E3A63 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
+		97C83100EB5789E2246D2109 /* Pods-DarkSlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkSlack.debug.xcconfig"; path = "Target Support Files/Pods-DarkSlack/Pods-DarkSlack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +34,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6115DA93295A3735FF470C10 /* Pods_DarkSlack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		496BF7A798B55851A5E8A7D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97C83100EB5789E2246D2109 /* Pods-DarkSlack.debug.xcconfig */,
+				6E2501BACD6ED9542E9D2B33 /* Pods-DarkSlack.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4DFCFC2269C94F23BA8733DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1577F484DF8817B659416040 /* Pods_DarkSlack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		91EDE1B22278DB50001E3A63 = {
 			isa = PBXGroup;
 			children = (
 				91EDE1BD2278DB50001E3A63 /* DarkSlack */,
 				91EDE1BC2278DB50001E3A63 /* Products */,
+				496BF7A798B55851A5E8A7D4 /* Pods */,
+				4DFCFC2269C94F23BA8733DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +86,7 @@
 				91EDE1C42278DB50001E3A63 /* Main.storyboard */,
 				91EDE1C72278DB50001E3A63 /* Info.plist */,
 				91EDE1C82278DB50001E3A63 /* DarkSlack.entitlements */,
+				91EDE1CE2278DFE9001E3A63 /* DragView.swift */,
 			);
 			path = DarkSlack;
 			sourceTree = "<group>";
@@ -70,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91EDE1CB2278DB50001E3A63 /* Build configuration list for PBXNativeTarget "DarkSlack" */;
 			buildPhases = (
+				3426A3233E0A286158705ABF /* [CP] Check Pods Manifest.lock */,
 				91EDE1B72278DB50001E3A63 /* Sources */,
 				91EDE1B82278DB50001E3A63 /* Frameworks */,
 				91EDE1B92278DB50001E3A63 /* Resources */,
+				EB574EFF2ADA40392DDEF8DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +158,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3426A3233E0A286158705ABF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DarkSlack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB574EFF2ADA40392DDEF8DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DarkSlack/Pods-DarkSlack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DarkSlack/Pods-DarkSlack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91EDE1B72278DB50001E3A63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -135,6 +212,7 @@
 			files = (
 				91EDE1C12278DB50001E3A63 /* ViewController.swift in Sources */,
 				91EDE1BF2278DB50001E3A63 /* AppDelegate.swift in Sources */,
+				91EDE1CF2278DFE9001E3A63 /* DragView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +347,7 @@
 		};
 		91EDE1CC2278DB50001E3A63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97C83100EB5789E2246D2109 /* Pods-DarkSlack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DarkSlack/DarkSlack.entitlements;
@@ -288,6 +367,7 @@
 		};
 		91EDE1CD2278DB50001E3A63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E2501BACD6ED9542E9D2B33 /* Pods-DarkSlack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DarkSlack/DarkSlack.entitlements;
