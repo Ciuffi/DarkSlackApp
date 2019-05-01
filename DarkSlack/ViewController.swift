@@ -11,12 +11,12 @@ import Alamofire
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var errorText: NSTextField!
     @IBOutlet weak var dropZone: DragView!
     @IBOutlet weak var progress: NSProgressIndicator!
     @IBOutlet weak var SlackImage: NSImageView!
     @IBOutlet weak var StaticText: NSTextField!
     @IBOutlet weak var doneText: NSTextField!
-    let ssbUrl = "https://raw.githubusercontent.com/caiceA/slack-black-theme/master/ssb-interop.js"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +30,36 @@ class ViewController: NSViewController {
         }
     }
     func DownloadSSB(_ filePath: URL) {
+        var prefs = Preferences()
+        var ssbURL: String?
+        if (prefs.url == "custom"){
+            ssbURL = prefs.customURL
+        }else{
+            ssbURL = prefs.url
+        }
         let destination: DownloadRequest.DownloadFileDestination = { _, _ in
             let path = filePath.appendingPathComponent("Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js")
             return (path, [.removePreviousFile])
         }
-        Alamofire.download(ssbUrl, to:
+        Alamofire.download(ssbURL!, to:
             destination).responseData { _ in
                 self.progress.stopAnimation(self)
-                self.doneText.isEnabled = true
+                self.doneText.isHidden = false
+                print("Successfully downloaded from url \(ssbURL!)")
         }
     }
 }
 
 extension ViewController: DragContainerDelegate {
+    func draggingFileOk(){
+        errorText.isHidden = true
+    }
     func draggingFileAccept(_ file: URL) {
+        errorText.isHidden = true
         progress.startAnimation(self)
         DownloadSSB(file)
     }
     func draggingFileDecline(_ file: URL) {
-        print("Descline: \(file.absoluteString)")
+        errorText.isHidden = false;
     }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6115DA93295A3735FF470C10 /* Pods_DarkSlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1577F484DF8817B659416040 /* Pods_DarkSlack.framework */; };
+		9153319F227948CC00E244BE /* prefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9153319E227948CC00E244BE /* prefViewController.swift */; };
+		915331A122794BC700E244BE /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915331A022794BC700E244BE /* Preferences.swift */; };
 		91EDE1BF2278DB50001E3A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EDE1BE2278DB50001E3A63 /* AppDelegate.swift */; };
 		91EDE1C12278DB50001E3A63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EDE1C02278DB50001E3A63 /* ViewController.swift */; };
 		91EDE1C32278DB50001E3A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91EDE1C22278DB50001E3A63 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		1577F484DF8817B659416040 /* Pods_DarkSlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkSlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2501BACD6ED9542E9D2B33 /* Pods-DarkSlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkSlack.release.xcconfig"; path = "Target Support Files/Pods-DarkSlack/Pods-DarkSlack.release.xcconfig"; sourceTree = "<group>"; };
+		9153319E227948CC00E244BE /* prefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prefViewController.swift; sourceTree = "<group>"; };
+		915331A022794BC700E244BE /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		91EDE1BB2278DB50001E3A63 /* DarkSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EDE1BE2278DB50001E3A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91EDE1C02278DB50001E3A63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				91EDE1C72278DB50001E3A63 /* Info.plist */,
 				91EDE1C82278DB50001E3A63 /* DarkSlack.entitlements */,
 				91EDE1CE2278DFE9001E3A63 /* DragView.swift */,
+				9153319E227948CC00E244BE /* prefViewController.swift */,
+				915331A022794BC700E244BE /* Preferences.swift */,
 			);
 			path = DarkSlack;
 			sourceTree = "<group>";
@@ -216,7 +222,9 @@
 			files = (
 				91EDE1C12278DB50001E3A63 /* ViewController.swift in Sources */,
 				91EDE1BF2278DB50001E3A63 /* AppDelegate.swift in Sources */,
+				915331A122794BC700E244BE /* Preferences.swift in Sources */,
 				91EDE1CF2278DFE9001E3A63 /* DragView.swift in Sources */,
+				9153319F227948CC00E244BE /* prefViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

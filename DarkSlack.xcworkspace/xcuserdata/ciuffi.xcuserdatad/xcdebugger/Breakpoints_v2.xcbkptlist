@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DarkSlack/ViewController.swift"
-            timestampString = "578373549.4369839"
+            timestampString = "578376427.407635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "draggingFileAccept(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DarkSlack/ViewController.swift"
-            timestampString = "578373549.4377199"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "DownloadSSB(_:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "draggingFileOk()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

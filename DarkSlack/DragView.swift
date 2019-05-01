@@ -11,6 +11,7 @@ import Cocoa
 protocol DragContainerDelegate {
     func draggingFileAccept(_ file: URL)
     func draggingFileDecline(_ file: URL)
+    func draggingFileOk()
 }
 
 class DragView: NSView {
@@ -43,6 +44,7 @@ class DragView: NSView {
         let acceptFiles = checkExtension(sender)
         if (acceptFiles) {
             self.layer?.backgroundColor = draggedColor.cgColor
+            delegate?.draggingFileOk()
         }
         return acceptFiles ? NSDragOperation.generic : NSDragOperation()
     }
