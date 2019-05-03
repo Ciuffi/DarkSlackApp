@@ -9,6 +9,7 @@
 import Cocoa
 import Alamofire
 
+
 class ViewController: NSViewController {
 
     @IBOutlet weak var errorText: NSTextField!
@@ -29,8 +30,18 @@ class ViewController: NSViewController {
         self.errorText.isHidden = false
         NSSound.beep()
     }
+    func copySSBFile(_ inPath: URL, _ outPath: URL) {
+        try? FileManager.default.removeItem(at: outPath)
+        do {
+            try FileManager.default.moveItem(at: inPath, to: outPath)
+            doneText.isHidden = false
+        }catch {
+            showError("Unable to move file to into slack app")
+        }
+        progress.stopAnimation(self)
+    }
     
-    func DownloadSSB(_ filePath: URL) {
+    func DownloadSSB(_ appPath: URL, _ callback: @escaping (_ inPath: URL, _ outPath: URL) -> Void) {
         var prefs = Preferences()
         var ssbURL: String?
         if (prefs.url == "Custom"){
@@ -38,19 +49,22 @@ class ViewController: NSViewController {
         }else{
             ssbURL = prefs.url
         }
+    let filePath = appPath.appendingPathComponent("Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js")
         let destination: DownloadRequest.DownloadFileDestination = { _, _ in
-            let path = filePath.appendingPathComponent("Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js")
-            return (path, [.removePreviousFile])
+            let documentsURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0]
+            let fileURL = documentsURL.appendingPathComponent("ssb-interop.js")
+            
+            return (fileURL, [.removePreviousFile])
         }
-        Alamofire.download(ssbURL!, to:
-            destination).responseData {response in
+        Alamofire.download(ssbURL!, to: destination).responseData {response in
                 switch response.result {
-                case .failure:
+                case .failure(let error):
                     self.showError("Failed to download file: \(ssbURL!)")
+                    print(error)
                 case .success(_):
-                    self.doneText.isHidden = false
+                    let inPath: URL = URL(fileURLWithPath: response.destinationURL!.path)
+                    callback(inPath, filePath)
                 }
-                self.progress.stopAnimation(self)
         }
     }
 }
@@ -62,7 +76,7 @@ extension ViewController: DragContainerDelegate {
     func draggingFileAccept(_ file: URL) {
         errorText.isHidden = true
         progress.startAnimation(self)
-        DownloadSSB(file)
+        DownloadSSB(file, copySSBFile(_:_:))
     }
     func draggingFileDecline(_ file: URL) {
         doneText.isHidden = true
